@@ -1,0 +1,13 @@
+{
+  "name": "plugin-node-wrappable",
+  "version": "1.0.0",
+  "description": "Patternlab Node plugin for wrappable patterns (e.g. on inverse backgrounds)",
+  "main": "index.js",
+  "repository": "https://github.com/networkteam/patternlab-plugin-node-wrappable.git",
+  "author": "Christopher Hlubek",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "postinstall": "node ./postinstall.js"
+  }
+}
