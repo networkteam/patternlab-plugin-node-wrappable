@@ -1,4 +1,4 @@
-![license](https://img.shields.io/github/license/networkteam/plugin-node-wrappable.svg)
+![license](https://img.shields.io/github/license/networkteam/patternlab-plugin-node-wrappable.svg)
 [![npm](https://img.shields.io/npm/v/plugin-node-wrappable.svg)](https://www.npmjs.com/package/plugin-node-wrappable)
 
 # Wrapper Plugin for Pattern Lab Node
