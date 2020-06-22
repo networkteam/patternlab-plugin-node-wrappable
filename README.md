@@ -43,6 +43,8 @@ For example, if we want to preview a button pattern with a gray wrapper, you hav
 title: Button
 wrap_in: gray
 ---
+
+[Insert description here]
 ```
 
 This results in an additional `<div class="sg-wrapper-gray">` element around the rendered pattern - but only in the standalone view and not if this pattern is included as an partial in other patterns.
