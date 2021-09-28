@@ -20,7 +20,8 @@ function writeConfigToOutput(patternlab, pluginConfig) {
 function wrapPattern(pattern) {
   const patternData = JSON.parse(pattern.patternData);
   if (patternData.extraOutput && patternData.extraOutput.wrap_in) {
-    pattern.patternPartialCode = '<div class="sg-wrapper-' + patternData.extraOutput.wrap_in + '">' + pattern.patternPartialCode + '</div>';
+    const prefix = patternlab.config.plugins[pluginName].prefix || "sg-wrapper-";
+    pattern.patternPartialCode = '<div class="' + prefix + patternData.extraOutput.wrap_in + '">' + pattern.patternPartialCode + '</div>';
   }
 }
 

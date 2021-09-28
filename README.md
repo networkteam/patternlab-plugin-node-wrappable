@@ -52,3 +52,24 @@ This results in an additional `<div class="sg-wrapper-gray">` element around the
 ## Enabling / Disabling the Plugin
 
 After install, you may manually enable or disable the plugin by finding the `plugin-node-wrappable` key within your main Pattern Lab project's `patternlab-config.json` file and setting the `enabled` flag. In the future this will be possible via CLI.
+
+## Individual class prefix
+
+After install, you may manually enable or disable the plugin by finding the `plugin-node-wrappable` key within your main Pattern Lab project's `patternlab-config.json` file and setting the `enabled` flag.
+
+In case that you'd like to change the default `sg-wrapper-` prefix for the class on the `div` wrapper HTML tag, you could configure that one within your main Pattern Lab project's `patternlab-config.json` under the `plugin-node-wrappable` keys `config` entry, for example like this:
+
+``` json
+"plugins": {
+  "plugin-node-wrappable": {
+    "enabled": true,
+    "initialized": false,
+    "prefix": "pl-wrapper-"
+  }
+}
+```
+
+This would render the wrapping HTML tag like this:
+``` html
+<div class="pl-wrapper-gray">
+```
