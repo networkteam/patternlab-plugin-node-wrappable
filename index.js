@@ -17,11 +17,20 @@ function writeConfigToOutput(patternlab, pluginConfig) {
   }
 }
 
-function onPatternIterate(patternlab, pattern) {
+function wrapPattern(pattern) {
   const patternData = JSON.parse(pattern.patternData);
   if (patternData.extraOutput && patternData.extraOutput.wrap_in) {
     pattern.patternPartialCode = '<div class="sg-wrapper-' + patternData.extraOutput.wrap_in + '">' + pattern.patternPartialCode + '</div>';
   }
+}
+
+function onPatternIterate(patternlab, pattern) {
+  // Patternlab >=5 will supply arguments as an array
+  if (typeof pattern === 'undefined') {
+    pattern = patternlab[1];
+  }
+
+  wrapPattern(pattern);
 }
 
 /**
